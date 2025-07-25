@@ -1,0 +1,109 @@
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: grid; place-items: center;
+  background: url('bg\ hitam\ keren.jpeg') no-repeat center/cover;
+  position: relative; overflow: hidden;
+}
+body::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: rgba(15, 23, 42, 0.75); /* dark slate overlay */
+  z-index: 0;
+}
+
+.login-container {
+  width: 320px;
+  padding: 2.5rem 2rem;
+  border-radius: 1.2rem;
+  background: rgba(30, 41, 59, 0.85); /* dark slate blue bg */
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(71, 85, 105, 0.6);
+  box-shadow: 0 24px 50px rgba(0,0,0,0.7);
+  display: flex; flex-direction: column;
+  gap: 1.8rem; align-items: center;
+  position: relative; z-index: 1;
+}
+
+.avatar {
+  width: 70px; height: 70px;
+  background: #1e293b; /* darker bg */
+  border-radius: 50%;
+  display: grid; place-items: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+  position: absolute; top: -35px;
+  transition: transform 0.3s;
+}
+.avatar:hover { transform: scale(1.1); }
+.avatar img { width: 30px; height: 30px; filter: brightness(0) invert(1); }
+
+h2 {
+  margin-top: 2.8rem;
+  font-size: 1.3rem; font-weight: 700;
+  color: #f1f5f9; /* light slate */
+  text-shadow: 0 2px 6px rgba(0,0,0,0.85);
+}
+
+.input-group {
+  width: 100%;
+  margin-bottom: 1.4rem;
+  position: relative;
+}
+.input-group input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1.5px solid rgba(100, 116, 139, 0.8);
+  border-radius: 10px;
+  background: rgba(71, 85, 105, 0.6);
+  font-size: 1rem;
+  color: #e2e8f0;
+  backdrop-filter: blur(8px);
+  transition: 0.3s;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.7);
+}
+.input-group input::placeholder { color: #94a3b8; }
+.input-group input:focus {
+  outline: none;
+  border-color: #2563eb;
+  background: rgba(147, 197, 253, 0.15);
+  box-shadow: 0 0 8px rgba(37, 99, 235, 0.8);
+  color: #fff;
+}
+
+button {
+  width: 100%;
+  padding: 0.85rem;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  cursor: pointer;
+  color: #e0e7ff;
+  background: linear-gradient(135deg, #1e40af, #2563eb);
+  box-shadow: 0 6px 25px rgba(37, 99, 235, 0.7);
+  transition: 0.3s;
+}
+button:hover {
+  background: linear-gradient(135deg, #1e3a8a, #1e40af);
+  box-shadow: 0 8px 30px rgba(37, 99, 235, 0.9);
+}
+
+.forgot {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.9);
+}
+.forgot a {
+  color: #60a5fa;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.forgot a:hover {
+  color: #93c5fd;
+  text-decoration: underline;
+}
